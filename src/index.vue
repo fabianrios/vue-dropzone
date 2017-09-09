@@ -28,11 +28,11 @@
             },
             thumbnailHeight: {
                 type: Number,
-                default: 200
+                default: 150
             },
             thumbnailWidth: {
                 type: Number,
-                default: 200
+                default: 150
             },
             showRemoveLink: {
                 type: Boolean,
@@ -200,7 +200,7 @@
                     dictFileTooBig              : 'File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.',
                     dictInvalidFileType         : `You can't upload files of this type.`,
                     dictMaxFilesExceeded        : 'You can not upload any more files. (max: {{maxFiles}})',
-                    dictRemoveFile              : 'Remove',
+                    dictRemoveFile              : 'remove',
                     dictRemoveFileConfirmation  : null,
                     dictResponseError           : 'Server responded with {{statusCode}} code.'
                 };
@@ -268,7 +268,7 @@
                 dictFileTooBig              : this.languageSettings.dictFileTooBig,
                 dictInvalidFileType         : this.languageSettings.dictInvalidFileType,
                 dictMaxFilesExceeded        : this.languageSettings.dictMaxFilesExceeded,
-                dictRemoveFile              : this.languageSettings.dictRemoveFile,
+                dictRemoveFile              : this.getProp(this.languageSettings.dictRemoveFile),
                 dictRemoveFileConfirmation  : this.languageSettings.dictRemoveFileConfirmation,
                 dictResponseError           : this.languageSettings.dictResponseError,
                 resizeWidth                 : this.getProp(this.resizeWidth,this.dropzoneOptions.resizeWidth),
@@ -371,7 +371,9 @@
         }
 
         .dz-preview {
-
+            &.dz-file-preview .dz-image{
+                border-radius: 0;
+            }
             &.dz-error{
                 border: 1px solid red;
             }
@@ -404,7 +406,15 @@
                     border: none;
                 }
             }
-
+            .dz-progress{
+                top:auto;
+                bottom:0;
+                width: 100%;
+                border-radius: 0;
+                left: auto;
+                height: 5px;
+                margin-left: 0;
+            }
             .dz-progress .dz-upload {
                 background: #cccccc;
             }
