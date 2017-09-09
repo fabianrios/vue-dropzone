@@ -200,7 +200,7 @@
                     dictFileTooBig              : 'File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.',
                     dictInvalidFileType         : `You can't upload files of this type.`,
                     dictMaxFilesExceeded        : 'You can not upload any more files. (max: {{maxFiles}})',
-                    dictRemoveFile              : 'remove',
+                    dictRemoveFile              : '<i class="fa fa-trash"></i>',
                     dictRemoveFileConfirmation  : null,
                     dictResponseError           : 'Server responded with {{statusCode}} code.'
                 };
@@ -364,7 +364,7 @@
 
         .dz-message{
             display: block;
-            padding-top: 50%;
+            padding-top: 40vh;
             margin: 0 auto;
         }
 
@@ -460,6 +460,8 @@
                     line-height: 30px;
                     color: #ffffff;
                     font-size: 18px;
+                    margin: 0 auto;
+                    display: block;
                 }
             }
 
