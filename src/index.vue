@@ -200,7 +200,7 @@
         computed: {
             languageSettings () {
                 let defaultValues = {
-                    dictDefaultMessage          : '<br>Drop files here to upload',
+                    dictDefaultMessage          : '<br>Upload the images here',
                     dictCancelUpload            : 'Cancel upload',
                     dictCancelUploadConfirmation: 'Are you sure you want to cancel this upload?',
                     dictFallbackMessage         : 'Your browser does not support drag and drop file uploads.',
