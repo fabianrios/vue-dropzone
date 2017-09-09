@@ -362,6 +362,12 @@
         color: #777;
         transition: background-color .2s linear;
 
+        .dz-message{
+            display: block;
+            padding-top: 50%;
+            margin: 0 auto;
+        }
+
         &:hover {
             background-color: #F6F6F6;
         }
