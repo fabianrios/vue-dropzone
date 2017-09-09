@@ -52,7 +52,7 @@
             },
             useFontAwesome: {
                 type: Boolean,
-                default: false
+                default: true
             },
             headers: {
                 type: Object
@@ -192,7 +192,7 @@
         computed: {
             languageSettings () {
                 let defaultValues = {
-                    dictDefaultMessage          : '<br>Drop files here to upload',
+                    dictDefaultMessage          : '<br>Upload the images here',
                     dictCancelUpload            : 'Cancel upload',
                     dictCancelUploadConfirmation: 'Are you sure you want to cancel this upload?',
                     dictFallbackMessage         : 'Your browser does not support drag and drop file uploads.',
@@ -235,7 +235,7 @@
             },
             errorIcon: function () {
                 if (this.useFontAwesome) {
-                    return '<i class="fa fa-close"></i>';
+                    return '<i class="fa fa-exclamation"></i>';
                 } else {
                     return ' <i class="material-icons">error</i>';
                 }
@@ -372,6 +372,10 @@
 
         .dz-preview {
 
+            &.dz-error{
+                border: 1px solid red;
+            }
+
             .dz-image {
                 border-radius: 0;
                 &:hover {
@@ -429,20 +433,24 @@
             }
 
             .dz-success-mark, .dz-error-mark {
-                margin-left: auto !important;
-                margin-top: auto !important;
-                width: 100% !important;
-                top: 35% !important;
-                left: 0;
+                margin-left: auto;
+                margin-top: auto;
+                width: 30px;
+                height: 30px;
+                background:#c74b36; 
+                top: 0;
+                right: 0;
                 i {
-                    color: white !important;
-                    font-size: 5rem !important;
+                    line-height: 30px;
+                    color: #ffffff;
+                    font-size: 18px;
                 }
             }
 
             .dz-error-message {
-                top: calc(50% + 25px);
-                left: calc(50% - 35px);
+                top: 40px;
+                right: -55px;
+                left: auto;
             }
         }
     }

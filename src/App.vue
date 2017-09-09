@@ -30,6 +30,7 @@
                     uploadMultiple: true,
                     parallelUploads: 1000,
                     maxNumberOfFiles: 1000,
+                    useFontAwesome: true,
                 },
                 language: {
                     dictDefaultMessage : 'Hi'
