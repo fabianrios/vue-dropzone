@@ -178,6 +178,9 @@
             getQueuedFiles: function () {
                 return this.dropzone.getQueuedFiles();
             },
+            accept: function (file, done) {
+                return this.dropzone.accept(file, done);
+            },
             getProp:function(attribute_prop,object_prop){
                 if (!this.useCustomDropzoneOptions)
                     return attribute_prop;
@@ -330,10 +333,6 @@
 
             this.dropzone.on('sending', function (file, xhr, formData) {
                 vm.$emit('vdropzone-sending', file, xhr, formData)
-            });
-
-            this.dropzone.on('accept', function (file, callback) {
-                vm.$emit('vdropzone-accpet', file, callback)
             });
 
             this.dropzone.on('sendingmultiple', function (file, xhr, formData) {
