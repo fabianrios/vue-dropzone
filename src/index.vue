@@ -443,14 +443,14 @@
             }
 
             .dz-success-mark, .dz-error-mark {
-                margin-left: auto !important;
-                margin-top: auto !important;
-                width: 100% !important;
-                top: 35% !important;
+                margin-left: auto;
+                margin-top: auto;
+                width: 100%;
+                top: 35%;
                 left: 0;
                 i {
-                    color: white !important;
-                    font-size: 5rem !important;
+                    color: white;
+                    font-size: 5rem;
                 }
             }
 
