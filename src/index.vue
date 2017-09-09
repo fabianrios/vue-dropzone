@@ -200,7 +200,7 @@
                     dictFileTooBig              : 'File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.',
                     dictInvalidFileType         : `You can't upload files of this type.`,
                     dictMaxFilesExceeded        : 'You can not upload any more files. (max: {{maxFiles}})',
-                    dictRemoveFile              : '<i class="fa fa-trash"></i>',
+                    dictRemoveFile              : '',
                     dictRemoveFileConfirmation  : null,
                     dictResponseError           : 'Server responded with {{statusCode}} code.'
                 };
