@@ -332,6 +332,10 @@
                 vm.$emit('vdropzone-sending', file, xhr, formData)
             });
 
+            this.dropzone.on('accept', function (file, callback) {
+                vm.$emit('vdropzone-accpet', file, callback)
+            });
+
             this.dropzone.on('sendingmultiple', function (file, xhr, formData) {
                 vm.$emit('vdropzone-sending-multiple', file, xhr, formData)
             });
