@@ -378,7 +378,7 @@
         }
 
         i {
-            color: #CCC;
+            color: #fff;
         }
 
         .dz-preview {
@@ -431,10 +431,17 @@
             }
 
             .dz-crop{
-                color:white;
                 position: absolute;
-                bottom: 75px;
-                left: 40px;
+                bottom: 64px;
+                left: 44px;
+                z-index: 99;
+                font-size: 22px;
+                border-right: 1px solid white;
+                padding: 1px 10px 1px 0;
+                opacity: 0;
+                i{
+                    color:#fff;
+                }
             }
 
             .dz-remove {
@@ -443,19 +450,17 @@
                 color: white;
                 padding: 10px;
                 top: inherit;
-                bottom: 75px;
-                right: 40px;
-                border: 1px white solid;
+                bottom: 55px;
+                right: 34px;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size: 0.8rem;
-                font-weight: 800;
-                letter-spacing: 1.1px;
+                font-size: 22px;
+                font-weight: normal;
                 opacity: 0;
             }
 
             &:hover {
-                .dz-remove {
+                .dz-remove, .dz-crop{
                     opacity: 1;
                 }
             }
