@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    var done = function done(){};
     export default {
         props: {
             id: {
@@ -178,7 +179,8 @@
             getQueuedFiles: function () {
                 return this.dropzone.getQueuedFiles();
             },
-            accept: function (file, done) {
+            accept: function (file) {
+                var done = function (error){ return error };
                 return this.dropzone.accept(file, done);
             },
             getProp:function(attribute_prop,object_prop){
@@ -428,15 +430,22 @@
                 background: #cccccc;
             }
 
+            .dz-crop{
+                color:white;
+                position: absolute;
+                bottom: 75px;
+                left: 40px;
+            }
+
             .dz-remove {
                 position: absolute;
                 z-index: 30;
                 color: white;
-                margin-left: 15px;
                 padding: 10px;
                 top: inherit;
-                bottom: 15px;
-                border: 2px white solid;
+                bottom: 75px;
+                right: 40px;
+                border: 1px white solid;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: 0.8rem;

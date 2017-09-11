@@ -6,6 +6,7 @@
         <div v-if="ok">
             <dropzone ref="myVueDropzone" id="dropzone" url="https://httpbin.org/post"
                       v-on:vdropzone-success="showSuccess"
+                      v-on:vdropzone-files-added="validateSome"
                       v-bind:dropzone-options="dropzoneOptions"                      
                       v-bind:use-custom-dropzone-options="true">
             </dropzone>
@@ -38,6 +39,17 @@
             }
         },
         methods: {
+            'validateSome': function (files) {
+                for (let i = 0; i < files.length; i += 1) {
+                    var file = {};
+                    file = files[i];
+                    console.log(file, file['name']);
+                    if (file.name == '20615356_10155548130191798_306823012_o.jpg') {
+                        this.$refs.myVueDropzone.accept(file);
+                        console.log('too small: ', file, this.$refs.myVueDropzone);
+                    }
+                }
+            },
             'showSuccess': function (file) {
                 console.log('im added');
                 console.log(this.$refs.myVueDropzone)
