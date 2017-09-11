@@ -265,7 +265,7 @@
                 autoProcessQueue            : this.getProp(this.autoProcessQueue,this.dropzoneOptions.autoProcessQueue),
                 headers                     : this.getProp(this.headers,this.dropzoneOptions.headers),
                 previewTemplate             : this.previewTemplate(this),
-                dictDefaultMessage          : this.cloudIcon + this.languageSettings.dictDefaultMessage,
+                dictDefaultMessage          : this.languageSettings.dictDefaultMessage,
                 dictCancelUpload            : this.languageSettings.dictCancelUpload,
                 dictCancelUploadConfirmation: this.languageSettings.dictCancelUploadConfirmation,
                 dictFallbackMessage         : this.languageSettings.dictFallbackMessage,
@@ -386,7 +386,7 @@
                 border-radius: 0;
             }
             &.dz-error{
-                border: 1px solid red;
+                border: 1px solid #c94a30;
             }
 
             .dz-image {
@@ -462,6 +462,9 @@
             &:hover {
                 .dz-remove, .dz-crop{
                     opacity: 1;
+                    i{
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -479,6 +482,7 @@
                     font-size: 18px;
                     margin: 0 auto;
                     display: block;
+                    text-align: center;
                 }
             }
 
